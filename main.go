@@ -80,10 +80,7 @@ func main() {
 	// 等待信号
 	<-sigChan
 
-	fmt.Println("接收到退出信号...")
 
-	// 不优雅关闭 - 直接退出程序，不调用 c.Shutdown()
-	fmt.Println("程序即将退出，不进行优雅关闭...")
 	os.Exit(0)
 }
 
