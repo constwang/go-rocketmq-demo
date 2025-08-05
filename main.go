@@ -15,6 +15,20 @@ import (
 	"github.com/apache/rocketmq-client-go/v2/rlog"
 )
 
+// main is the entry point of the RocketMQ consumer application.
+// It initializes and starts a RocketMQ push consumer to subscribe to messages
+// from a specified topic. The consumer processes messages and handles graceful
+// shutdown upon receiving interrupt signals.
+//
+// The consumer configuration includes:
+// - NameServer address
+// - Consumer group name
+// - Subscription to a topic with all tags
+// - Message processing logic
+//
+// Usage:
+//   Run the application and it will start consuming messages from the specified topic.
+//   Press Ctrl+C to gracefully shutdown the consumer.
 func main() {
 	// 配置RocketMQ NameServer地址
 	nameServers := []string{"127.0.0.1:9876"}
